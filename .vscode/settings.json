@@ -1,16 +1,15 @@
 {
   "[typescriptreact]": {
     // "editor.defaultFormatter": "vscode.typescript-language-features",
-    "editor.defaultFormatter": null,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.tabSize": 2
   },
   "[typescript]": {
     // "editor.defaultFormatter": "vscode.typescript-language-features",
-    "editor.defaultFormatter": null,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.tabSize": 2
-
   },
   "vetur.format.defaultFormatter.ts": "none",
   "eslint.packageManager": "yarn",
