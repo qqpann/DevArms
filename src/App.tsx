@@ -1,38 +1,27 @@
 import React from 'react'
-import logo from './logo.svg'
-import tauriCircles from './tauri.svg'
-import tauriWord from './wordmark.svg'
 import './App.css'
+import { Link, Route, Routes } from 'react-router-dom'
+import { toolPages } from './Pages'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="inline-logo">
-          <img src={tauriCircles} className="App-logo rotate" alt="logo" />
-          <img src={tauriWord} className="App-logo smaller" alt="logo" />
-        </div>
-        <a
-          className="App-link"
-          href="https://tauri.studio"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Tauri
-        </a>
-        <img src={logo} className="App-logo rotate" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </header>
+      <nav>
+        {toolPages.map((page) => (
+          <Link to={page.path} key={page.path}>
+            {page.name}
+          </Link>
+        ))}
+      </nav>
+      <Routes>
+        {toolPages.map((page) => (
+          <Route
+            path={page.path}
+            element={<page.Component />}
+            key={page.path}
+          />
+        ))}
+      </Routes>
     </div>
   )
 }
