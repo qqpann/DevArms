@@ -1,8 +1,11 @@
-use sha2::{Digest, Sha256};
-// use base64ct::{Base64, Encoding};
+extern crate wasm_bindgen;
+use wasm_bindgen::prelude::*;
 
 // Thanks: https://github.com/RustCrypto/hashes
+// use base64ct::{Base64, Encoding};
+use sha2::{Digest, Sha256};
 
+#[wasm_bindgen]
 pub fn sha256(txt: &str) -> String {
     let hash = Sha256::new().chain_update(txt).finalize();
     // Base64::encode_string(&hash)
