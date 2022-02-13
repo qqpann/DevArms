@@ -36,3 +36,16 @@ an array:
     let res = arms::json_to_yaml(input);
     assert_eq!(res, output.to_string());
 }
+
+#[wasm_bindgen_test]
+fn base64enc_works() {
+    let a = "hello world";
+    let b = "aGVsbG8gd29ybGQ=";
+    assert_eq!(arms::base64enc(a), b);
+}
+#[wasm_bindgen_test]
+fn base64dec_works() {
+    let a = "hello world";
+    let b = "aGVsbG8gd29ybGQ=";
+    assert_eq!(a, arms::base64dec(b));
+}
