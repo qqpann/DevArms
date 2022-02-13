@@ -25,3 +25,7 @@ Open development window.
 ### `yarn tauri build`
 
 Build it.
+
+### `yarn tauri deps update`
+
+Upgrade tauri and inside `src-tauri`.
