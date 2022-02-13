@@ -1,13 +1,18 @@
 import React, { SyntheticEvent, useEffect, useState } from 'react'
 import init, { sha256 } from 'arms'
+import { ArmsInput } from '../components/Input/Input'
+import { ArmsOutput } from '../components/Output/Output'
+import { Heading, VStack } from '@chakra-ui/react'
 
 export const HashGenerator = () => {
   const { source, onChangeSource, sha256str } = useHash()
   return (
-    <div>
-      <input value={source} onChange={onChangeSource} />
-      <span>{sha256str}</span>
-    </div>
+    <VStack alignItems="start" w="full">
+      <Heading size="md">Input</Heading>
+      <ArmsInput value={source} onChange={onChangeSource} />
+      <Heading size="md">SHA256</Heading>
+      <ArmsOutput value={sha256str} />
+    </VStack>
   )
 }
 
