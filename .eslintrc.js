@@ -25,6 +25,7 @@ module.exports = {
         'linebreak-style': ['error', 'unix'],
         quotes: ['error', 'single'],
         semi: ['error', 'never'],
+        'no-restricted-imports': ['error', { patterns: ['../'] }],
         'import/order': [
           'error',
           {

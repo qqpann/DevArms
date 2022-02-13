@@ -2,7 +2,7 @@ import { Heading, HStack, VStack } from '@chakra-ui/react'
 import init, { json_to_yaml } from 'arms'
 import React, { useEffect, useState } from 'react'
 
-import { ArmsTextarea } from '../components/Textarea/Textarea'
+import { ArmsTextarea } from '~/components/Textarea/Textarea'
 
 export const JsonYaml = () => {
   const { json, yaml, updateJson } = useJsonYaml()

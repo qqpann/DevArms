@@ -8,8 +8,8 @@ import {
 import React, { ReactText } from 'react'
 import { Link } from 'react-router-dom'
 
-import { ColorModeSwitcher } from '../../ColorModeSwitcher'
-import { ToolPage } from '../../Pages'
+import { ColorModeSwitcher } from '~/ColorModeSwitcher'
+import { ToolPage } from '~/Pages'
 
 export const Sidebar = ({ links }: { links: ToolPage[] }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()

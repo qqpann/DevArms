@@ -2,9 +2,8 @@ import { Heading, VStack } from '@chakra-ui/react'
 import init, { sha256 } from 'arms'
 import React, { useEffect, useState } from 'react'
 
-import { ArmsInput } from '../components/Input/Input'
-import { ArmsOutput } from '../components/Output/Output'
-
+import { ArmsInput } from '~/components/Input/Input'
+import { ArmsOutput } from '~/components/Output/Output'
 
 export const HashGenerator = () => {
   const { source, update, sha256str } = useHash()
