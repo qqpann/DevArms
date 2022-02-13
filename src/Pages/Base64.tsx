@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import { Heading, VStack } from '@chakra-ui/react'
 import init, { base64enc, base64dec } from 'arms'
+import React, { useEffect, useState } from 'react'
+
 import { ArmsInput } from '../components/Input/Input'
 import { ArmsOutput } from '../components/Output/Output'
-import { Heading, VStack } from '@chakra-ui/react'
 
 export const Base64Converter = () => {
   const { source, base64, updateSource, updateBase64 } = useBase64()

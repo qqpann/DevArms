@@ -7,6 +7,7 @@ import {
 } from '@chakra-ui/react'
 import React, { ReactText } from 'react'
 import { Link } from 'react-router-dom'
+
 import { ColorModeSwitcher } from '../../ColorModeSwitcher'
 import { ToolPage } from '../../Pages'
 

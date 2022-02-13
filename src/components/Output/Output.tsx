@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Input,
   InputProps,
@@ -8,6 +7,7 @@ import {
   Text,
   useClipboard,
 } from '@chakra-ui/react'
+import React from 'react'
 import { FaCopy } from 'react-icons/fa'
 
 type Props = InputProps & {

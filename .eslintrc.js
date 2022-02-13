@@ -16,7 +16,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'import'],
   overrides: [
     {
       files: ['src/**/*.{ts,tsx}'],
@@ -25,6 +25,31 @@ module.exports = {
         'linebreak-style': ['error', 'unix'],
         quotes: ['error', 'single'],
         semi: ['error', 'never'],
+        'import/order': [
+          'error',
+          {
+            groups: [
+              'builtin',
+              'external',
+              'parent',
+              'sibling',
+              'index',
+              'object',
+              'type',
+            ],
+            pathGroups: [
+              {
+                pattern: '@alias/**',
+                group: 'parent',
+                position: 'before',
+              },
+            ],
+            alphabetize: {
+              order: 'asc',
+            },
+            'newlines-between': 'always',
+          },
+        ],
       },
     },
   ],

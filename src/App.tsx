@@ -1,8 +1,9 @@
 import { Container, Flex } from '@chakra-ui/react'
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { Sidebar } from './components/Sidebar/Sidebar'
+
 import { toolPages } from './Pages'
+import { Sidebar } from './components/Sidebar/Sidebar'
 
 const App = () => {
   return (

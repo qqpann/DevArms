@@ -1,4 +1,3 @@
-import React, { SyntheticEvent } from 'react'
 import {
   Input,
   InputProps,
@@ -7,6 +6,7 @@ import {
   Button,
   Text,
 } from '@chakra-ui/react'
+import React, { SyntheticEvent } from 'react'
 import { IoCloseCircle } from 'react-icons/io5'
 
 type Props = InputProps & {
