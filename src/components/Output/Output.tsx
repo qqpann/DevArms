@@ -6,24 +6,29 @@ import {
   InputRightElement,
   Button,
   Text,
+  useClipboard,
 } from '@chakra-ui/react'
 import { FaCopy } from 'react-icons/fa'
 
-type Props = InputProps
-export const ArmsOutput = (props: Props) => {
+type Props = InputProps & {
+  value: string
+}
+export const ArmsOutput = ({ value, ...rest }: Props) => {
+  const { hasCopied, onCopy } = useClipboard(value)
   return (
     <InputGroup alignItems="center">
       <Input
-        {...props}
+        {...rest}
         isReadOnly={true}
         variant={'filled'}
         size="lg"
         pr="4rem"
         textOverflow={'ellipsis'}
         overflow="hidden"
+        value={value}
       />
       <InputRightElement h="100%" alignItems="center" ml="1" mr="2">
-        <Button>
+        <Button onClick={onCopy}>
           <Text>
             <FaCopy />
           </Text>
