@@ -1,13 +1,12 @@
 import {
   Box,
-  CloseButton,
   Flex,
   Text,
   useColorModeValue,
   useDisclosure,
 } from '@chakra-ui/react'
 import React, { ReactText } from 'react'
-import { Link, Route, Routes } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { ColorModeSwitcher } from '../../ColorModeSwitcher'
 import { ToolPage } from '../../Pages'
 
@@ -28,10 +27,10 @@ const SidebarContent = ({
       bg={useColorModeValue('white', 'gray.900')}
       borderRight="1px"
       borderRightColor={useColorModeValue('gray.200', 'gray.700')}
-      w={{ base: 'full', md: 60 }}
+      w={{ base: 'full', sm: 60 }}
       // pos="fixed"
       h="full"
-      display={{ base: 'none', md: 'block' }}
+      display={{ base: 'none', sm: 'block' }}
     >
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
         <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
