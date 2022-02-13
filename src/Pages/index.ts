@@ -1,5 +1,6 @@
 import { HashGenerator } from './Hash'
 import { Base64Converter } from './Base64'
+import { JsonYaml } from './JsonYaml'
 
 export type ToolPage = {
   name: string
@@ -9,4 +10,5 @@ export type ToolPage = {
 export const toolPages: ToolPage[] = [
   { name: 'Hash', path: '/hash', Component: HashGenerator },
   { name: 'Base64', path: '/base64', Component: Base64Converter },
+  { name: 'JSON<>YAML', path: '/json-yaml', Component: JsonYaml },
 ]
