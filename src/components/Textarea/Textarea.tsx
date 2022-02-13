@@ -10,5 +10,7 @@ export const ArmsTextarea = ({ value, set, ...rest }: Props) => {
     const target = e.target as HTMLTextAreaElement
     if (set) set(target.value)
   }
-  return <Textarea {...rest} value={value} onChange={onChange} />
+  return (
+    <Textarea h="full" w="full" {...rest} value={value} onChange={onChange} />
+  )
 }

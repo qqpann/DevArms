@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import init, { json_to_yaml } from 'arms'
-import { Box, Heading, Stack, VStack } from '@chakra-ui/react'
+import { Heading, HStack, VStack } from '@chakra-ui/react'
 import { ArmsTextarea } from '../components/Textarea/Textarea'
 
 export const JsonYaml = () => {
   const { json, yaml, updateJson } = useJsonYaml()
 
   return (
-    <Stack>
-      <Heading size="md">JSON</Heading>
-      <Box>
+    <HStack w="full" h="full">
+      <VStack w="full" h="full" alignItems="start">
+        <Heading size="md">JSON</Heading>
         <ArmsTextarea value={json} set={updateJson} />
-      </Box>
+      </VStack>
 
-      <Heading size="md">YAML</Heading>
-      <Box>
+      <VStack w="full" h="full" alignItems="start">
+        <Heading size="md">YAML</Heading>
         <ArmsTextarea value={yaml} />
-      </Box>
-    </Stack>
+      </VStack>
+    </HStack>
   )
 }
 
