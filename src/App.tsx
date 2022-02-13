@@ -1,19 +1,13 @@
+import { Flex } from '@chakra-ui/react'
 import React from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
-import { ColorModeSwitcher } from './ColorModeSwitcher'
+import { Sidebar } from './components/Sidebar/Sidebar'
 import { toolPages } from './Pages'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <nav>
-        <ColorModeSwitcher />
-        {toolPages.map((page) => (
-          <Link to={page.path} key={page.path}>
-            {page.name}
-          </Link>
-        ))}
-      </nav>
+    <Flex w="full" h="full" id="abc">
+      <Sidebar links={toolPages} />
       <Routes>
         {toolPages.map((page) => (
           <Route
@@ -23,7 +17,7 @@ function App() {
           />
         ))}
       </Routes>
-    </div>
+    </Flex>
   )
 }
 

@@ -1,7 +1,7 @@
 import { HashGenerator } from './Hash'
 import { Base64Converter } from './Base64'
 
-type ToolPage = {
+export type ToolPage = {
   name: string
   path: string
   Component: () => JSX.Element
