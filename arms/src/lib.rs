@@ -13,6 +13,8 @@ pub fn sha256(txt: &str) -> String {
 }
 
 use std::io::BufWriter;
+
+#[wasm_bindgen]
 pub fn json_to_yaml(txt: &str) -> String {
     let buf = BufWriter::new(Vec::new());
 

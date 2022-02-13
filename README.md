@@ -29,3 +29,13 @@ Build it.
 ### `yarn tauri deps update`
 
 Upgrade tauri and inside `src-tauri`.
+
+## WASM Scripts
+
+### `wasm-pack build --target web`
+
+Build wasm.
+
+### `wasm-pack test --firefox --headless`
+
+Test wasm.
