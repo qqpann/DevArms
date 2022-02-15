@@ -4,17 +4,17 @@ import React, { useEffect, useState } from 'react'
 import { ArmsInput } from 'src/components/Input/Input'
 
 export const NumberBase = () => {
-  const nb = useNumberBase()
+  const { deci, hexa, octa, bina, factoryUpdate } = useNumberBase()
   return (
     <VStack>
       <Heading>Source</Heading>
-      <ArmsInput value={nb.deci} set={nb.updateDeci} />
+      <ArmsInput value={deci} set={factoryUpdate(10)} />
       <Heading>Hexadecimal</Heading>
-      <ArmsInput value={nb.hexa} set={nb.updateHexa} />
+      <ArmsInput value={hexa} set={factoryUpdate(16)} />
       <Heading>Octal</Heading>
-      <ArmsInput value={nb.octa} set={nb.updateOcta} />
+      <ArmsInput value={octa} set={factoryUpdate(8)} />
       <Heading>Binary</Heading>
-      <ArmsInput value={nb.bina} set={nb.updateBina} />
+      <ArmsInput value={bina} set={factoryUpdate(2)} />
     </VStack>
   )
 }
@@ -34,17 +34,11 @@ const useNumberBase = () => {
     setOcta((curr) => number_base_convert(base, 8, txt) ?? curr)
     setBina((curr) => number_base_convert(base, 2, txt) ?? curr)
   }
-  const updateDeci = (txt: string) => {
-    update(txt, 10)
-  }
-  const updateHexa = (txt: string) => {
-    update(txt, 16)
-  }
-  const updateOcta = (txt: string) => {
-    update(txt, 8)
-  }
-  const updateBina = (txt: string) => {
-    update(txt, 2)
+  const factoryUpdate = (base: number) => {
+    const set = (txt: string) => {
+      return update(txt, base)
+    }
+    return set
   }
 
   return {
@@ -52,9 +46,6 @@ const useNumberBase = () => {
     hexa,
     octa,
     bina,
-    updateDeci,
-    updateHexa,
-    updateOcta,
-    updateBina,
+    factoryUpdate,
   }
 }
