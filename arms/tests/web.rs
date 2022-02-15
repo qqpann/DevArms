@@ -92,3 +92,14 @@ fn lorem_works() {
     let res = arms::generate::lorem_ipsum::lorem_gen(3);
     assert!(res.len() > 0);
 }
+
+#[wasm_bindgen_test]
+fn text_case_snake() {
+    let input = "__weird--var _name-";
+    let expect = "weird_var_name";
+    let output = arms::convert::text_case::text_case_convert(
+        input,
+        arms::convert::text_case::TextCase::Snake,
+    );
+    assert_eq!(expect, output);
+}
