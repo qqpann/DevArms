@@ -16,8 +16,8 @@ export const HtmlEncDec = () => {
 }
 
 const useHtmlEncDec = () => {
-  const [decoded, setDecoded] = useState<string>('')
-  const [encoded, setEncoded] = useState<string>('')
+  const [decoded, setDecoded] = useState<string>('a > b && a < c')
+  const [encoded, setEncoded] = useState<string>('a &gt; b &amp;&amp; a &lt; c')
   useEffect(() => {
     init()
   }, [])
