@@ -2,6 +2,7 @@ import { Base64Converter } from './Base64'
 import { HashGenerator } from './Hash'
 import { HtmlEncDec } from './HtmlEncDec'
 import { JsonYaml } from './JsonYaml'
+import { Jwt } from './Jwt'
 import { NumberBase } from './NumberBase'
 import { UrlEncDec } from './UrlEncDec'
 
@@ -21,4 +22,5 @@ export const toolPages: ToolPage[] = [
     path: '/html-enc-dec',
     Component: HtmlEncDec,
   },
+  { name: 'JWT', path: '/jwt', Component: Jwt },
 ]
