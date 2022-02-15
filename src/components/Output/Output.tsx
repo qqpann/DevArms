@@ -29,7 +29,7 @@ export const ArmsOutput = ({ value, ...rest }: Props) => {
       />
       <InputRightElement h="100%" alignItems="center" ml="1" mr="2">
         <Button onClick={onCopy}>
-          <Text>{hasCopied ? <FaCopy /> : <FaCheck />}</Text>
+          <Text>{hasCopied ? <FaCheck /> : <FaCopy />}</Text>
         </Button>
       </InputRightElement>
     </InputGroup>
