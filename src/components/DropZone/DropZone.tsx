@@ -27,7 +27,7 @@ export const DropZone = ({
 
   const dropText = isDragActive
     ? 'Drop the files here ...'
-    : 'Drag and drop .torrent file here, or click to select files'
+    : 'Drag and drop any file here, or click to select files'
 
   const activeBg = useColorModeValue('gray.100', 'gray.600')
   const borderColor = useColorModeValue(
@@ -38,6 +38,7 @@ export const DropZone = ({
   return (
     <Center
       p={10}
+      w="full"
       cursor="pointer"
       bg={isDragActive ? activeBg : 'transparent'}
       _hover={{ bg: activeBg }}
