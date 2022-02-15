@@ -1,4 +1,6 @@
-# DevPocket
+# DevArms
+
+All in one offline toolbox: swiss army knife-like utils give you extra arms
 
 ## React Scripts
 
