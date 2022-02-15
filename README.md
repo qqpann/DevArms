@@ -1,6 +1,6 @@
 # DevArms
 
-All in one offline toolbox: swiss army knife-like utils give you extra arms
+All in one offline toolbox: swiss army knife-like utils give you extra arms.
 Written in Rust, React. Powered by Tauri.
 
 ## React Scripts
