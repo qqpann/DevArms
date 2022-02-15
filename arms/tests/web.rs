@@ -69,3 +69,13 @@ fn html_decode_works() {
     let expect = "a > b && a < c";
     assert_eq!(arms::enc_dec::html::html_decode(input), expect);
 }
+
+const SECRET: &str = "some-secret";
+const JWT: &str = "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJzb21lb25lIn0.WM_WnPUkHK6zm6Wz7zk1kmIxz990Te7nlDjQ3vzcye29szZ-Sj47rLNSTJNzpQd_";
+#[wasm_bindgen_test]
+fn test_jwt_decode() {
+    let decoded = arms::convert::jwt::jwt_decode(SECRET, JWT);
+    println!("{:?}", decoded);
+    assert_eq!(decoded.header(), "{\"alg\":\"HS384\"}");
+    assert_eq!(decoded.payload(), "{\"sub\":\"someone\"}");
+}
