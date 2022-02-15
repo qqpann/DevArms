@@ -11,7 +11,7 @@ wasm_bindgen_test_configure!(run_in_browser);
 pub fn hash_works_on_web() {
     let txt = "Hello World";
     assert_eq!(
-        arms::generators::hash::sha256(txt),
+        arms::generate::hash::sha256(txt),
         "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e".to_string()
     );
 }
@@ -32,7 +32,7 @@ an array:
   - 2
   - 1
 "#;
-    let res = arms::converters::json_yaml::json_to_yaml(input);
+    let res = arms::convert::json_yaml::json_to_yaml(input);
     assert_eq!(res, output.to_string());
 }
 
@@ -52,7 +52,7 @@ fn base64dec_works() {
 #[wasm_bindgen_test]
 fn decimal_to_binary() {
     let input = "10";
-    let output = arms::converters::number_base::number_base_convert(10, 2, input).unwrap();
+    let output = arms::convert::number_base::number_base_convert(10, 2, input).unwrap();
     assert_eq!(output, "1010");
 }
 
