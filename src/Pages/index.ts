@@ -5,6 +5,7 @@ import { JsonYaml } from './JsonYaml'
 import { Jwt } from './Jwt'
 import { LoremIpsum } from './LoremIpsum'
 import { NumberBase } from './NumberBase'
+import { TextCasePage } from './TextCase'
 import { UrlEncDec } from './UrlEncDec'
 import { Uuid } from './Uuid'
 
@@ -27,4 +28,5 @@ export const toolPages: ToolPage[] = [
   { name: 'JWT', path: '/jwt', Component: Jwt },
   { name: 'UUID', path: '/uuid', Component: Uuid },
   { name: 'Lorem Ipsum', path: '/lorem', Component: LoremIpsum },
+  { name: 'Text Case Converter', path: '/case', Component: TextCasePage },
 ]
