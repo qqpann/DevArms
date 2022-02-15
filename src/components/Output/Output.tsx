@@ -4,8 +4,8 @@ import {
   InputGroup,
   InputRightElement,
   Button,
-  Text,
   useClipboard,
+  Fade,
 } from '@chakra-ui/react'
 import React from 'react'
 import { FaCheck, FaCopy } from 'react-icons/fa'
@@ -29,7 +29,28 @@ export const ArmsOutput = ({ value, ...rest }: Props) => {
       />
       <InputRightElement h="100%" alignItems="center" ml="1" mr="2">
         <Button onClick={onCopy}>
-          <Text>{hasCopied ? <FaCheck /> : <FaCopy />}</Text>
+          <Fade in={hasCopied} unmountOnExit>
+            <FaCheck
+              style={{
+                top: 'calc(50% - 8px)',
+                left: 'calc(50% - 8px)',
+                width: '16px',
+                height: '16px',
+                position: 'absolute',
+              }}
+            />
+          </Fade>
+          <Fade in={!hasCopied} unmountOnExit>
+            <FaCopy
+              style={{
+                top: 'calc(50% - 8px)',
+                left: 'calc(50% - 8px)',
+                width: '16px',
+                height: '16px',
+                position: 'absolute',
+              }}
+            />
+          </Fade>
         </Button>
       </InputRightElement>
     </InputGroup>
