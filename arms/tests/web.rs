@@ -48,3 +48,10 @@ fn base64dec_works() {
     let b = "aGVsbG8gd29ybGQ=";
     assert_eq!(a, arms::enc_dec::base64::base64dec(b));
 }
+
+#[wasm_bindgen_test]
+fn decimal_to_binary() {
+    let input = "10";
+    let output = arms::converters::number_base::number_base_convert(10, 2, input).unwrap();
+    assert_eq!(output, "1010");
+}
