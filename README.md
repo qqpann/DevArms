@@ -4,40 +4,59 @@ All in one offline toolbox: swiss army knife-like utils give you extra arms
 
 ## React Scripts
 
-### `yarn start`
+### Serve React
 
-Runs the app in the development mode.
-You will also see any lint errors in the console.
+```terminal
+yarn start
+```
 
-### `yarn lint`
+### Lint
 
-Check eslint and fix if possible.
+```terminal
+yarn lint
+```
 
-### `yarn test`
+### Test
+
+```terminal
+yarn test
+```
 
 Launches the test runner in the interactive watch mode.
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ## Tauri Scripts
 
-### `yarn tauri dev`
+### Serve Tauri windowed app
 
-Open development window.
+```terminal
+yarn tauri dev
+```
 
-### `yarn tauri build`
+### Build Tauri app
 
-Build it.
+```terminal
+yarn tauri build
+```
 
-### `yarn tauri deps update`
+### Upgrade Tauri dependencies
+
+```terminal
+yarn tauri deps update
+```
 
 Upgrade tauri and inside `src-tauri`.
 
 ## WASM Scripts
 
-### `wasm-pack build --target web`
+### Build WASM
 
-Build wasm.
+```terminal
+wasm-pack build --target web
+```
 
-### `wasm-pack test --firefox --headless`
+### Test WASM
 
-Test wasm.
+```terminal
+wasm-pack test --firefox --headless
+```
