@@ -55,3 +55,10 @@ fn decimal_to_binary() {
     let output = arms::converters::number_base::number_base_convert(10, 2, input).unwrap();
     assert_eq!(output, "1010");
 }
+
+#[wasm_bindgen_test]
+fn url_encode_non_ascii() {
+    let input = "こんにちは世界";
+    let expect = "%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF%E4%B8%96%E7%95%8C";
+    assert_eq!(arms::enc_dec::url::url_encode(input), expect);
+}
