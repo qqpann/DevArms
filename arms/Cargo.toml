@@ -23,6 +23,15 @@ serde_yaml = "0.8.23"
 sha2 = "0.10.1"
 wasm-bindgen = "0.2.79"
 wee_alloc = { version = "0.4.5", optional = true }
+getrandom = { version = "0.2", features = ["js"] } # indirect dependency of uuid, needing config for wasm
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.29"
+
+[dependencies.uuid]
+version = "1.0.0-alpha.1"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]

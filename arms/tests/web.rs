@@ -79,3 +79,10 @@ fn test_jwt_decode() {
     assert_eq!(decoded.header(), "{\"alg\":\"HS384\"}");
     assert_eq!(decoded.payload(), "{\"sub\":\"someone\"}");
 }
+
+#[wasm_bindgen_test]
+fn uuid_works() {
+    let id1 = arms::generate::uuid::uuid_gen();
+    let id2 = arms::generate::uuid::uuid_gen();
+    assert_ne!(id1, id2);
+}
