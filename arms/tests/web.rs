@@ -103,3 +103,24 @@ fn text_case_snake() {
     );
     assert_eq!(expect, output);
 }
+
+#[wasm_bindgen_test]
+fn format_json_works() {
+    // A JSON input with plenty of whitespace.
+    let input = r#"
+    {
+        "a boolean": true,
+        "an array": [3, 2, 1]
+    }
+    "#;
+    let expect = r#"{
+  "a boolean": true,
+  "an array": [
+    3,
+    2,
+    1
+  ]
+}"#;
+    let output = arms::format::json::format_json(input);
+    assert_eq!(expect.to_string(), output);
+}
