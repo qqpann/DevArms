@@ -86,3 +86,9 @@ fn uuid_works() {
     let id2 = arms::generate::uuid::uuid_gen();
     assert_ne!(id1, id2);
 }
+
+#[wasm_bindgen_test]
+fn lorem_works() {
+    let res = arms::generate::lorem_ipsum::lorem_gen(3);
+    assert!(res.len() > 0);
+}
