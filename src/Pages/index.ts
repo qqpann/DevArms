@@ -1,4 +1,5 @@
 import { Base64Converter } from './Base64'
+import { Checksum } from './Checksum'
 import { HashGenerator } from './Hash'
 import { HtmlEncDec } from './HtmlEncDec'
 import { JsonYaml } from './JsonYaml'
@@ -29,4 +30,5 @@ export const toolPages: ToolPage[] = [
   { name: 'UUID', path: '/uuid', Component: Uuid },
   { name: 'Lorem Ipsum', path: '/lorem', Component: LoremIpsum },
   { name: 'Text Case Converter', path: '/case', Component: TextCasePage },
+  { name: 'Checksum', path: '/checksum', Component: Checksum },
 ]
