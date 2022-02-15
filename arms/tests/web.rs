@@ -62,3 +62,10 @@ fn url_encode_non_ascii() {
     let expect = "%E3%81%93%E3%82%93%E3%81%AB%E3%81%A1%E3%81%AF%E4%B8%96%E7%95%8C";
     assert_eq!(arms::enc_dec::url::url_encode(input), expect);
 }
+
+#[wasm_bindgen_test]
+fn html_decode_works() {
+    let input = "a &gt; b &amp;&amp; a &lt; c";
+    let expect = "a > b && a < c";
+    assert_eq!(arms::enc_dec::html::html_decode(input), expect);
+}

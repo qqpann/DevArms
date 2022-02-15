@@ -12,6 +12,7 @@ crate-type = ["cdylib", "rlib"]
 [dependencies]
 base16ct = { version = "0.1.1", features = ["alloc"] }
 base64 = "0.13.0"
+html-escape = "0.2.9"
 percent-encoding = "2.1.0"
 serde = "1.0.136"
 serde-transcode = "1.1.1"
