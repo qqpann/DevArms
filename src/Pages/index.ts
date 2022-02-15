@@ -5,6 +5,7 @@ import { JsonYaml } from './JsonYaml'
 import { Jwt } from './Jwt'
 import { NumberBase } from './NumberBase'
 import { UrlEncDec } from './UrlEncDec'
+import { Uuid } from './Uuid'
 
 export type ToolPage = {
   name: string
@@ -23,4 +24,5 @@ export const toolPages: ToolPage[] = [
     Component: HtmlEncDec,
   },
   { name: 'JWT', path: '/jwt', Component: Jwt },
+  { name: 'UUID', path: '/uuid', Component: Uuid },
 ]
