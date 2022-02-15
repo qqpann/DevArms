@@ -27,4 +27,11 @@ mod tests {
         let expect = "a > b && a < c";
         assert_eq!(super::html_decode(input), expect);
     }
+    #[test]
+    fn html_decode_named_entries() {
+        // TODO: opposite should work as well
+        let input = "&lt;&gt;&amp;&quot;&apos;&copy;&reg;";
+        let expect = "<>&\"'©®";
+        assert_eq!(super::html_decode(input), expect);
+    }
 }
