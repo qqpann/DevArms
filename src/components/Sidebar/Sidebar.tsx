@@ -1,10 +1,4 @@
-import {
-  Box,
-  Flex,
-  Text,
-  useColorModeValue,
-  useDisclosure,
-} from '@chakra-ui/react'
+import { Box, Flex, Text, useColorModeValue } from '@chakra-ui/react'
 import React, { ReactText } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -12,17 +6,10 @@ import { ColorModeSwitcher } from '~/ColorModeSwitcher'
 import { ToolPage } from '~/Pages'
 
 export const Sidebar = ({ links }: { links: ToolPage[] }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  return <SidebarContent links={links} onClose={onClose} />
+  return <SidebarContent links={links} />
 }
 
-const SidebarContent = ({
-  links,
-  onClose,
-}: {
-  links: ToolPage[]
-  onClose: () => void
-}) => {
+const SidebarContent = ({ links }: { links: ToolPage[] }) => {
   return (
     <Box
       bg={useColorModeValue('white', 'gray.900')}

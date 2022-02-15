@@ -8,7 +8,7 @@ import {
   useClipboard,
 } from '@chakra-ui/react'
 import React from 'react'
-import { FaCopy } from 'react-icons/fa'
+import { FaCheck, FaCopy } from 'react-icons/fa'
 
 type Props = InputProps & {
   value: string
@@ -29,9 +29,7 @@ export const ArmsOutput = ({ value, ...rest }: Props) => {
       />
       <InputRightElement h="100%" alignItems="center" ml="1" mr="2">
         <Button onClick={onCopy}>
-          <Text>
-            <FaCopy />
-          </Text>
+          <Text>{hasCopied ? <FaCopy /> : <FaCheck />}</Text>
         </Button>
       </InputRightElement>
     </InputGroup>
