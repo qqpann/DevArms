@@ -5255,28 +5255,9 @@ eslint-plugin-flowtype@^8.0.3:
     lodash "^4.17.21"
     string-natural-compare "^3.0.1"
 
-eslint-plugin-import@^2.25.3:
+eslint-plugin-import@^2.25.3, eslint-plugin-import@^2.25.4:
   version "2.25.4"
   resolved "https://registry.npmjs.org/eslint-plugin-import/-/eslint-plugin-import-2.25.4.tgz"
-  integrity sha512-/KJBASVFxpu0xg1kIBn9AUa8hQVnszpwgE7Ld0lKAlx7Ie87yzEzCgSkekt+le/YVhiaosO4Y14GDAOc41nfxA==
-  dependencies:
-    array-includes "^3.1.4"
-    array.prototype.flat "^1.2.5"
-    debug "^2.6.9"
-    doctrine "^2.1.0"
-    eslint-import-resolver-node "^0.3.6"
-    eslint-module-utils "^2.7.2"
-    has "^1.0.3"
-    is-core-module "^2.8.0"
-    is-glob "^4.0.3"
-    minimatch "^3.0.4"
-    object.values "^1.1.5"
-    resolve "^1.20.0"
-    tsconfig-paths "^3.12.0"
-
-eslint-plugin-import@^2.25.4:
-  version "2.25.4"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.25.4.tgz#322f3f916a4e9e991ac7af32032c25ce313209f1"
   integrity sha512-/KJBASVFxpu0xg1kIBn9AUa8hQVnszpwgE7Ld0lKAlx7Ie87yzEzCgSkekt+le/YVhiaosO4Y14GDAOc41nfxA==
   dependencies:
     array-includes "^3.1.4"
