@@ -1,11 +1,11 @@
 [package]
-name = "DevArms"
+name = "dev_arms"
 version = "0.1.0"
 description = "All in one offline toolbox: swiss army knife-like utils give you extra arms"
 authors = ["Qiushi Pan"]
 license = ""
 repository = ""
-default-run = "DevArms"
+default-run = "dev_arms"
 edition = "2018"
 build = "src/build.rs"
 
