@@ -14,12 +14,23 @@ const SidebarContent = ({ links }: { links: ToolPage[] }) => {
       bg={useColorModeValue('white', 'gray.900')}
       borderRight="1px"
       borderRightColor={useColorModeValue('gray.200', 'gray.700')}
-      w={{ base: 'full', sm: 60 }}
-      // pos="fixed"
+      w={{ base: 'full', sm: 80 }}
       h="full"
+      overflowY="scroll"
+      // pos="fixed"
       display={{ base: 'none', sm: 'block' }}
     >
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
+      <Flex
+        h="20"
+        w="full"
+        alignItems="center"
+        pl="8"
+        pr="4"
+        justifyContent="space-between"
+        position="sticky"
+        top={0}
+        bg={'inherit'}
+      >
         <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
           DevArms
         </Text>
