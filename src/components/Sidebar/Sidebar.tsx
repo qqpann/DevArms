@@ -42,21 +42,13 @@ const SidebarContent = ({ links }: { links: ToolPage[] }) => {
         <ColorModeSwitcher />
       </Flex>
       {links.map((page) => (
-        <NavItem page={page} key={page.path}>
-          {page.name}
-        </NavItem>
+        <NavItem page={page} key={page.path} />
       ))}
     </Box>
   )
 }
 
-const NavItem = ({
-  page,
-  children,
-}: {
-  page: ToolPage
-  children: ReactText
-}) => {
+const NavItem = ({ page }: { page: ToolPage }) => {
   return (
     <Link to={page.path}>
       <Flex
@@ -71,7 +63,8 @@ const NavItem = ({
           color: 'white',
         }}
       >
-        {children}
+        <page.Icon />
+        <Text ml={2}>{page.name}</Text>
       </Flex>
     </Link>
   )
