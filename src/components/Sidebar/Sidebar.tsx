@@ -1,4 +1,4 @@
-import { Box, Flex, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, Image, Text, useColorModeValue } from '@chakra-ui/react'
 import React, { ReactText } from 'react'
 import { Link } from 'react-router-dom'
 import { ColorModeSwitcher } from 'src/ColorModeSwitcher'
@@ -24,16 +24,21 @@ const SidebarContent = ({ links }: { links: ToolPage[] }) => {
         h="20"
         w="full"
         alignItems="center"
-        pl="8"
+        pl="6"
         pr="4"
         justifyContent="space-between"
         position="sticky"
         top={0}
         bg={'inherit'}
       >
-        <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-          DevArms
-        </Text>
+        <Link to={'/'}>
+          <Flex>
+            <Image src={'/logo128.png'} w={8} alt="DevArms Home" mr={2} />
+            <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
+              DevArms
+            </Text>
+          </Flex>
+        </Link>
         <ColorModeSwitcher />
       </Flex>
       {links.map((page) => (
