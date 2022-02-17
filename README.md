@@ -1,72 +1,61 @@
 # DevArms
 
-All in one offline toolbox: swiss army knife-like utils give you extra arms.
+<p align="center">
+  <img width="160" src="docs/assets/DevArmsIcon.svg">
+</p>
+<p align="center">
+Tiny toolkit for developers.
+</p>
+
+---
+
+DevArms is a collection of developer utils that gives you extra arms to reach more in your tasks.
+It runs completely offline, and cross-platform across Windows, Mac and Linux.
 Written in Rust, React. Powered by Tauri.
 
-## React Scripts
+## Quick Start
 
-### Serve React
+Install the built app from [release](https://github.com/qqhann/DevArms/releases) page.
+Or you can build it by yourself.
 
-```terminal
-yarn start
-```
+## Contribute
 
-### Lint
+Feature suggestions and bug reports are welcome!
+Opening an issue to discuss it before you hand a PR is recommended, but not needed.
+To contribute in code, you may follow the following steps.
+
+### App UI - React
+
+The app UI is built with React.
+Edit inside `src` and run:
 
 ```terminal
 yarn lint
+yarn start
 ```
 
-### Test
+### Core algorithms - Rust wasm
 
-```terminal
-yarn test
-```
-
-Launches the test runner in the interactive watch mode.
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-## Tauri Scripts
-
-### Serve Tauri windowed app
-
-```terminal
-yarn tauri dev
-```
-
-### Build Tauri app
-
-```terminal
-yarn tauri build
-```
-
-### Upgrade Tauri dependencies
-
-```terminal
-yarn tauri deps update
-```
-
-Upgrade tauri and inside `src-tauri`.
-
-## WASM Scripts
-
-### Build WASM
-
-```terminal
-wasm-pack build --target web
-```
-
-### Test WASM
+The core algorithms are written in Rust, and served as wasm.
+Edit inside `arms` and run:
 
 ```terminal
 wasm-pack test --firefox --headless
+wasm-pack build --target web
 ```
 
-### Publish to npm
+### App integration - Tauri
 
-Publish the wasm package as a public npm package. This is needed for smooth CI.
+The cross platform magic is made possible by Tauri.
+Edit inside `src-tauri` if needed, and run:
 
 ```terminal
-cd pkg
-npm publish --access=public
+# Open windowed app in development mode
+yarn tauri dev
+# Build it
+yarn tauri build
 ```
+
+## License
+
+See LICENSE.md
