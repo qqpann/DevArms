@@ -28,12 +28,6 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y webkit2gtk-4.0
-    - name: build wasm arms pkg
-      run: |
-        curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
-        cd arms
-        wasm-pack build --target web
-        cd ..
     - name: install app dependencies and build it
       run: yarn && yarn build
     - uses: tauri-apps/tauri-action@v0
