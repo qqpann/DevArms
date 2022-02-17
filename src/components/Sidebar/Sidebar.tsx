@@ -2,7 +2,6 @@ import { Box, Flex, Image, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ToolPage } from 'src/Pages'
-import { ColorModeSwitcher } from 'src/components/ColorModeSwitcher/ColorModeSwitcher'
 
 export const Sidebar = ({ links }: { links: ToolPage[] }) => {
   return <SidebarContent links={links} />
