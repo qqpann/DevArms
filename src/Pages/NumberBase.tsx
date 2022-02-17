@@ -1,21 +1,24 @@
 import { Heading, VStack } from '@chakra-ui/react'
 import init, { number_base_convert } from 'arms'
 import React, { useEffect, useState } from 'react'
+import { PageLayout } from 'src/Layouts/PageLayout'
 import { ArmsInput } from 'src/components/Input/Input'
 
 export const NumberBase = () => {
   const { deci, hexa, octa, bina, factoryUpdate } = useNumberBase()
   return (
-    <VStack>
-      <Heading>Source</Heading>
-      <ArmsInput value={deci} set={factoryUpdate(10)} />
-      <Heading>Hexadecimal</Heading>
-      <ArmsInput value={hexa} set={factoryUpdate(16)} />
-      <Heading>Octal</Heading>
-      <ArmsInput value={octa} set={factoryUpdate(8)} />
-      <Heading>Binary</Heading>
-      <ArmsInput value={bina} set={factoryUpdate(2)} />
-    </VStack>
+    <PageLayout title={'Number Base converter'}>
+      <VStack alignItems="start">
+        <Heading size="md">Decimal</Heading>
+        <ArmsInput value={deci} set={factoryUpdate(10)} />
+        <Heading size="md">Hexadecimal</Heading>
+        <ArmsInput value={hexa} set={factoryUpdate(16)} />
+        <Heading size="md">Octal</Heading>
+        <ArmsInput value={octa} set={factoryUpdate(8)} />
+        <Heading size="md">Binary</Heading>
+        <ArmsInput value={bina} set={factoryUpdate(2)} />
+      </VStack>
+    </PageLayout>
   )
 }
 

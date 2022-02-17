@@ -1,16 +1,24 @@
-import { Heading, VStack } from '@chakra-ui/react'
+import { Heading, HStack, VStack } from '@chakra-ui/react'
 import init, { format_json } from 'arms'
 import React, { useEffect, useState } from 'react'
+import { PageLayout } from 'src/Layouts/PageLayout'
 import { ArmsTextarea } from 'src/components/Textarea/Textarea'
 
 export const FormatJson = () => {
   const { source, target, update } = useFormatJson()
   return (
-    <VStack alignItems="start">
-      <Heading size="md">JSON</Heading>
-      <ArmsTextarea value={source} set={update} />
-      <ArmsTextarea value={target} />
-    </VStack>
+    <PageLayout title={'JSON formatter'}>
+      <HStack h="full" w="full">
+        <VStack alignItems="start" h="full" w="full">
+          <Heading size="md">JSON source</Heading>
+          <ArmsTextarea value={source} set={update} />
+        </VStack>
+        <VStack alignItems="start" h="full" w="full">
+          <Heading size="md">JSON formatted</Heading>
+          <ArmsTextarea value={target} />
+        </VStack>
+      </HStack>
+    </PageLayout>
   )
 }
 

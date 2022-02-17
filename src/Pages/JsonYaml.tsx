@@ -1,23 +1,26 @@
 import { Heading, HStack, VStack } from '@chakra-ui/react'
 import init, { json_to_yaml } from 'arms'
 import React, { useEffect, useState } from 'react'
+import { PageLayout } from 'src/Layouts/PageLayout'
 import { ArmsTextarea } from 'src/components/Textarea/Textarea'
 
 export const JsonYaml = () => {
   const { json, yaml, updateJson } = useJsonYaml()
 
   return (
-    <HStack w="full" h="full">
-      <VStack w="full" h="full" alignItems="start">
-        <Heading size="md">JSON</Heading>
-        <ArmsTextarea value={json} set={updateJson} />
-      </VStack>
+    <PageLayout title={'JSON <> YAML'}>
+      <HStack w="full" h="full">
+        <VStack w="full" h="full" alignItems="start">
+          <Heading size="md">JSON</Heading>
+          <ArmsTextarea value={json} set={updateJson} />
+        </VStack>
 
-      <VStack w="full" h="full" alignItems="start">
-        <Heading size="md">YAML</Heading>
-        <ArmsTextarea value={yaml} />
-      </VStack>
-    </HStack>
+        <VStack w="full" h="full" alignItems="start">
+          <Heading size="md">YAML</Heading>
+          <ArmsTextarea value={yaml} />
+        </VStack>
+      </HStack>
+    </PageLayout>
   )
 }
 

@@ -1,19 +1,22 @@
 import { Button, Heading, VStack } from '@chakra-ui/react'
 import init, { uuid_gen } from 'arms'
 import React, { useEffect, useState } from 'react'
+import { PageLayout } from 'src/Layouts/PageLayout'
 import { ArmsInput } from 'src/components/Input/Input'
 import { ArmsTextarea } from 'src/components/Textarea/Textarea'
 
 export const Uuid = () => {
   const { num, setNum, text, create } = useUuid()
   return (
-    <VStack alignItems="start">
-      <Heading size="md">Params</Heading>
-      <ArmsInput value={String(num)} set={(n) => setNum(Number(n))} />
-      <Button onClick={create}>Generate</Button>
-      <Heading size="md">UUID</Heading>
-      <ArmsTextarea value={text} />
-    </VStack>
+    <PageLayout title={'UUID generator'}>
+      <VStack alignItems="start">
+        <Heading size="md">Params</Heading>
+        <ArmsInput value={String(num)} set={(n) => setNum(Number(n))} />
+        <Button onClick={create}>Generate</Button>
+        <Heading size="md">UUID</Heading>
+        <ArmsTextarea value={text} />
+      </VStack>
+    </PageLayout>
   )
 }
 

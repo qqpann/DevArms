@@ -1,18 +1,21 @@
 import { Heading, VStack } from '@chakra-ui/react'
 import init, { sha256 } from 'arms'
 import React, { useEffect, useState } from 'react'
+import { PageLayout } from 'src/Layouts/PageLayout'
 import { ArmsInput } from 'src/components/Input/Input'
 import { ArmsOutput } from 'src/components/Output/Output'
 
 export const HashGenerator = () => {
   const { source, update, sha256str } = useHash()
   return (
-    <VStack alignItems="start" w="full">
-      <Heading size="md">Input</Heading>
-      <ArmsInput value={source} set={update} />
-      <Heading size="md">SHA256</Heading>
-      <ArmsOutput value={sha256str} />
-    </VStack>
+    <PageLayout title={'Hash'}>
+      <VStack alignItems="start">
+        <Heading size="md">Input</Heading>
+        <ArmsInput value={source} set={update} />
+        <Heading size="md">SHA256</Heading>
+        <ArmsOutput value={sha256str} />
+      </VStack>
+    </PageLayout>
   )
 }
 

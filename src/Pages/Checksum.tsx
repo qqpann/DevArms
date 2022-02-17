@@ -1,6 +1,7 @@
 import { Heading, VStack } from '@chakra-ui/react'
 import init, { sha256 } from 'arms'
 import React, { useEffect, useState } from 'react'
+import { PageLayout } from 'src/Layouts/PageLayout'
 import { DropZone } from 'src/components/DropZone/DropZone'
 import { ArmsOutput } from 'src/components/Output/Output'
 
@@ -14,14 +15,16 @@ export const Checksum = () => {
     }
   }
   return (
-    <VStack alignItems="start">
-      <Heading size="md">File</Heading>
-      <DropZone onFileAccepted={onFileAccepted} />
-      <Heading size="md">Current</Heading>
-      <ArmsOutput value={curr} />
-      <Heading size="md">Previous</Heading>
-      <ArmsOutput value={prev} />
-    </VStack>
+    <PageLayout title={'Checksum'}>
+      <VStack alignItems="start">
+        <Heading size="md">File</Heading>
+        <DropZone onFileAccepted={onFileAccepted} />
+        <Heading size="md">Current</Heading>
+        <ArmsOutput value={curr} />
+        <Heading size="md">Previous</Heading>
+        <ArmsOutput value={prev} />
+      </VStack>
+    </PageLayout>
   )
 }
 
