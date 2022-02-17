@@ -8,6 +8,7 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 import { GoGear } from 'react-icons/go'
+import { Link } from 'react-router-dom'
 import { ColorModeSwitcher } from 'src/components/ColorModeSwitcher/ColorModeSwitcher'
 
 export const Navbar = ({ title }: { title: string }) => {
@@ -18,15 +19,17 @@ export const Navbar = ({ title }: { title: string }) => {
         <Spacer />
         <Flex alignItems={'center'}>
           <ColorModeSwitcher />
-          <IconButton
-            size="md"
-            fontSize="lg"
-            variant="ghost"
-            color="current"
-            marginLeft="2"
-            icon={<GoGear />}
-            aria-label={'Open settings'}
-          />
+          <Link to={'/settings'}>
+            <IconButton
+              size="md"
+              fontSize="lg"
+              variant="ghost"
+              color="current"
+              marginLeft="2"
+              icon={<GoGear />}
+              aria-label={'Open settings'}
+            />
+          </Link>
         </Flex>
       </Flex>
     </Box>
