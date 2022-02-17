@@ -3,6 +3,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import { toolPages } from './Pages'
+import { Home } from './Pages/Home'
 import { Sidebar } from './components/Sidebar/Sidebar'
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <Sidebar links={toolPages} />
       <Container maxW="8xl" p="12">
         <Routes>
+          <Route path={'/'} element={<Home toolPages={toolPages} />} />
           {toolPages.map((page) => (
             <Route
               path={page.path}
