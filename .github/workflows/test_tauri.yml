@@ -18,7 +18,7 @@ jobs:
     - name: setup node
       uses: actions/setup-node@v1
       with:
-        node-version: 12
+        node-version: 14
     - name: install Rust stable
       uses: actions-rs/toolchain@v1
       with:
@@ -28,6 +28,12 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y webkit2gtk-4.0
+    - name: build wasm arms pkg
+      run: |
+        curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+        cd arms
+        wasm-pack build --target web
+        cd ..
     - name: install app dependencies and build it
       run: yarn && yarn build
     - uses: tauri-apps/tauri-action@v0
