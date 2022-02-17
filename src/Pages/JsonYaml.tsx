@@ -1,5 +1,5 @@
 import { Heading, HStack, VStack } from '@chakra-ui/react'
-import init, { json_to_yaml } from 'arms'
+import init, { json_to_yaml } from 'devarms'
 import React, { useEffect, useState } from 'react'
 import { PageLayout } from 'src/Layouts/PageLayout'
 import { ArmsTextarea } from 'src/components/Textarea/Textarea'

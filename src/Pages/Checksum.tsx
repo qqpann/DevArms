@@ -1,5 +1,5 @@
 import { Heading, VStack } from '@chakra-ui/react'
-import init, { sha256 } from 'arms'
+import init, { sha256 } from 'devarms'
 import React, { useEffect, useState } from 'react'
 import { PageLayout } from 'src/Layouts/PageLayout'
 import { DropZone } from 'src/components/DropZone/DropZone'

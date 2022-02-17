@@ -1,5 +1,5 @@
 import { Button, Heading, VStack } from '@chakra-ui/react'
-import init, { lorem_gen } from 'arms'
+import init, { lorem_gen } from 'devarms'
 import React, { useEffect, useState } from 'react'
 import { PageLayout } from 'src/Layouts/PageLayout'
 import { ArmsInput } from 'src/components/Input/Input'
