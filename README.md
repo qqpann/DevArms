@@ -46,6 +46,8 @@ Or you can build it by yourself.
 
 - JSON
 
+And more features are coming soon...
+
 ## Contribute
 
 Feature suggestions and bug reports are welcome!
