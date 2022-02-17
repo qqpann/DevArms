@@ -15,8 +15,36 @@ Written in Rust, React. Powered by Tauri.
 
 ## Quick Start
 
-Install the built app from [release](https://github.com/qqhann/DevArms/releases) page.
+:point_right: Install the built app from [release](https://github.com/qqhann/DevArms/releases) page.\
 Or you can build it by yourself.
+
+![window screenshot](docs/assets/DevArms_screenshot.png)
+
+## Features
+
+### Generators
+
+- Hash
+- UUID
+- Lorem Ipsum
+- Checksum
+
+### Converters
+
+- Base64
+- JSON <> YAML
+- Number base
+- Text case
+
+### Encoder/Decoder
+
+- URL percent text
+- HTML safe text
+- JWT
+
+### Formatters
+
+- JSON
 
 ## Contribute
 
@@ -58,4 +86,4 @@ yarn tauri build
 
 ## License
 
-See LICENSE.md
+MIT. See [LICENSE](LICENSE)
