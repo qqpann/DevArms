@@ -33,6 +33,7 @@ jobs:
         yarn remove devarms
         yarn
         yarn add devarms
+        yarn lint
         yarn build
     - uses: tauri-apps/tauri-action@v0
       env:
