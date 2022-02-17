@@ -2,6 +2,9 @@
 name = "arms"
 version = "0.1.0"
 edition = "2021"
+description = "Core functions for DevArms app"
+repository = "https://github.com/qqhann/DevArms"
+license = "MIT"
 
 # wasm setups
 [lib]
