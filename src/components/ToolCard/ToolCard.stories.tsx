@@ -23,5 +23,5 @@ export const FirstStory = Template.bind({})
 
 FirstStory.args = {
   /*👇 The args you need here will depend on your component */
-  page: { name: 'Test', Icon: SiJsonwebtokens } as ToolPage,
+  page: { name: 'Test', path: '', Icon: SiJsonwebtokens } as ToolPage,
 }
