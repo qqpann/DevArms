@@ -61,3 +61,12 @@ wasm-pack build --target web
 ```terminal
 wasm-pack test --firefox --headless
 ```
+
+### Publish to npm
+
+Publish the wasm package as a public npm package. This is needed for smooth CI.
+
+```terminal
+cd pkg
+npm publish --access=public
+```
