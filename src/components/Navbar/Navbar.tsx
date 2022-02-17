@@ -12,8 +12,8 @@ import { ColorModeSwitcher } from 'src/components/ColorModeSwitcher/ColorModeSwi
 
 export const Navbar = ({ title }: { title: string }) => {
   return (
-    <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-      <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+    <Box bg={useColorModeValue('gray.100', 'gray.900')} h={20} px={4} mb={8}>
+      <Flex alignItems={'center'} justifyContent={'space-between'} h="full">
         <Heading>{title}</Heading>
         <Spacer />
         <Flex alignItems={'center'}>

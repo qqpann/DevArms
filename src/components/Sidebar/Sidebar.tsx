@@ -21,12 +21,10 @@ const SidebarContent = ({ links }: { links: ToolPage[] }) => {
       display={{ base: 'none', sm: 'block' }}
     >
       <Flex
+        alignItems="center"
         h="20"
         w="full"
-        alignItems="center"
-        pl="6"
-        pr="4"
-        justifyContent="space-between"
+        px="8"
         position="sticky"
         top={0}
         bg={'inherit'}
@@ -39,7 +37,6 @@ const SidebarContent = ({ links }: { links: ToolPage[] }) => {
             </Text>
           </Flex>
         </Link>
-        <ColorModeSwitcher />
       </Flex>
       {links.map((page) => (
         <NavItem page={page} key={page.path} />
