@@ -10,7 +10,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [macos-latest, ubuntu-latest, windows-latest]
+        # platform: [macos-latest, ubuntu-latest, windows-latest]
+        platform: [windows-latest]
 
     runs-on: ${{ matrix.platform }}
     steps:
@@ -35,7 +36,8 @@ jobs:
         yarn add devarms
         yarn lint
         yarn build
-    - uses: tauri-apps/tauri-action@v0
+    # - uses: tauri-apps/tauri-action@v0
+    - uses: jdukewich/tauri-action@fix-windows-bundling
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
