@@ -3,30 +3,6 @@
 version = 3
 
 [[package]]
-name = "arms"
-version = "0.1.0"
-dependencies = [
- "base16ct",
- "base64",
- "convert_case",
- "getrandom",
- "hmac",
- "html-escape",
- "jwt",
- "lipsum",
- "percent-encoding",
- "serde",
- "serde-transcode",
- "serde_json",
- "serde_yaml",
- "sha2",
- "uuid",
- "wasm-bindgen",
- "wasm-bindgen-test",
- "wee_alloc",
-]
-
-[[package]]
 name = "autocfg"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -103,6 +79,30 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "683d6b536309245c849479fba3da410962a43ed8e51c26b729208ec0ac2798d0"
 dependencies = [
  "generic-array",
+]
+
+[[package]]
+name = "devarms"
+version = "0.1.0"
+dependencies = [
+ "base16ct",
+ "base64",
+ "convert_case",
+ "getrandom",
+ "hmac",
+ "html-escape",
+ "jwt",
+ "lipsum",
+ "percent-encoding",
+ "serde",
+ "serde-transcode",
+ "serde_json",
+ "serde_yaml",
+ "sha2",
+ "uuid",
+ "wasm-bindgen",
+ "wasm-bindgen-test",
+ "wee_alloc",
 ]
 
 [[package]]

@@ -1,5 +1,5 @@
 [package]
-name = "arms"
+name = "devarms"
 version = "0.1.0"
 edition = "2021"
 description = "Core functions for DevArms app"
