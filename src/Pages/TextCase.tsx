@@ -1,5 +1,5 @@
 import { Heading, VStack } from '@chakra-ui/react'
-import init, { text_case_convert, TextCase } from 'arms'
+import init, { text_case_convert, TextCase } from 'devarms'
 import React, { useEffect, useState } from 'react'
 import { PageLayout } from 'src/Layouts/PageLayout'
 import { ArmsInput } from 'src/components/Input/Input'

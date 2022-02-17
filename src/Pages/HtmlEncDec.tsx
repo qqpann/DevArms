@@ -1,5 +1,5 @@
 import { Heading, VStack } from '@chakra-ui/react'
-import init, { html_decode, html_encode } from 'arms'
+import init, { html_decode, html_encode } from 'devarms'
 import React, { useEffect, useState } from 'react'
 import { PageLayout } from 'src/Layouts/PageLayout'
 import { ArmsInput } from 'src/components/Input/Input'
