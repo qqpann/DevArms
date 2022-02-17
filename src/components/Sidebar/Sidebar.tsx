@@ -1,6 +1,6 @@
 import { Box, Flex, Image, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { ToolPage } from 'src/Pages'
 import { ColorModeSwitcher } from 'src/components/ColorModeSwitcher/ColorModeSwitcher'
 
@@ -49,6 +49,8 @@ const SidebarContent = ({ links }: { links: ToolPage[] }) => {
 }
 
 const NavItem = ({ page }: { page: ToolPage }) => {
+  const location = useLocation()
+  const isOpen = location.pathname === page.path
   return (
     <Link to={page.path}>
       <Flex
@@ -62,6 +64,8 @@ const NavItem = ({ page }: { page: ToolPage }) => {
           bg: 'cyan.400',
           color: 'white',
         }}
+        bg={isOpen ? 'cyan.600' : undefined}
+        color={isOpen ? 'white' : undefined}
       >
         <page.Icon />
         <Text ml={2}>{page.name}</Text>
