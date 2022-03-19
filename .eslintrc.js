@@ -8,8 +8,6 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:storybook/recommended',
-    'react-app',
-    'react-app/jest',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
