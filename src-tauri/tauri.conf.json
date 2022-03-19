@@ -1,7 +1,6 @@
 {
   "package": {
-    "productName": "DevArms",
-    "version": "0.1.0"
+    "productName": "DevArms"
   },
   "build": {
     "distDir": "../build",
@@ -23,17 +22,17 @@
       ],
       "resources": [],
       "externalBin": [],
-      "copyright": "",
+      "copyright": "©️ 2022 Qiushi Pan",
       "category": "DeveloperTool",
-      "shortDescription": "",
-      "longDescription": "",
+      "shortDescription": "Tiny toolkit for developers",
+      "longDescription": "DevArms is a collection of developer utils that gives you extra arms to reach more in your tasks. It runs completely offline, and cross-platform across Windows, Mac and Linux. Written in Rust, React. Powered by Tauri.",
       "deb": {
         "depends": [],
         "useBootstrapper": false
       },
       "macOS": {
         "frameworks": [],
-        "minimumSystemVersion": "",
+        "minimumSystemVersion": "10.13",
         "useBootstrapper": false,
         "exceptionDomain": "",
         "signingIdentity": null,

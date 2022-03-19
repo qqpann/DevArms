@@ -10,9 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # platform: [macos-latest, ubuntu-latest, windows-latest]
-        platform: [windows-latest]
-
+        platform: [macos-latest, ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
@@ -37,7 +35,9 @@ jobs:
         yarn lint
         yarn build
     # - uses: tauri-apps/tauri-action@v0
-    - uses: jdukewich/tauri-action@fix-windows-bundling
+    # - uses: jdukewich/tauri-action@fix-windows-bundling
+    # - uses: tauri-apps/tauri-action@b3f03835ca527e9735b386f1b1302ca70714b1e6
+    - uses: tauri-apps/tauri-action@0e558392ccadcb49bcc89e7df15a400e8f0c954d
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
