@@ -54,4 +54,26 @@ mod tests {
         let output = super::number_base_convert(16, 10, input).unwrap();
         assert_eq!(output, "42");
     }
+
+    #[test]
+    fn very_large_decimal_to_binary() {
+        let input = "1000000000000000000";
+        let output = super::number_base_convert(10, 2, input).unwrap();
+        assert_eq!(
+            output,
+            "110111100000101101101011001110100111011001000000000000000000"
+        );
+    }
+    #[test]
+    fn very_large_decimal_to_octal() {
+        let input = "1000000000000000000";
+        let output = super::number_base_convert(10, 8, input).unwrap();
+        assert_eq!(output, "67405553164731000000");
+    }
+    #[test]
+    fn very_large_decimal_to_hexadecimal() {
+        let input = "1000000000000000000";
+        let output = super::number_base_convert(10, 16, input).unwrap();
+        assert_eq!(output, "DE0B6B3A7640000");
+    }
 }
