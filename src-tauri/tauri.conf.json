@@ -1,7 +1,6 @@
 {
   "package": {
-    "productName": "DevArms",
-    "version": "0.1.0"
+    "productName": "DevArms"
   },
   "build": {
     "distDir": "../build",

@@ -1,6 +1,6 @@
 [package]
 name = "dev_arms"
-version = "0.1.0"
+version = "0.1.1"
 description = "All in one offline toolbox: swiss army knife-like utils give you extra arms"
 authors = [ "Qiushi Pan" ]
 license = ""
